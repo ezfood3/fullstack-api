@@ -1,4 +1,4 @@
-image: python:3.9
+image: python:3.10
 
 variables:
   IMAGE_VERSION: v1.0.0
@@ -17,7 +17,7 @@ Deploy:
   only:
     - deploy
   tags:
-    - fullstack
+    - fullstack-api
   script:
     - docker stop $(docker ps -aq) || true
     - docker build -t ${DOCKER_IMAGE} .
