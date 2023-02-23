@@ -11,9 +11,9 @@ variables:
 cache:
   key: "$CI_COMMIT_REF_SLUG"
 stages:
-  - gitlab
+  - deploy
 Deploy:
-  stage: gitlab
+  stage: deploy
   only:
     - gitlab
   tags:
