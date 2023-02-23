@@ -11,13 +11,13 @@ variables:
 cache:
   key: "$CI_COMMIT_REF_SLUG"
 stages:
-  - deploy
+  - gitlab
 Deploy:
-  stage: deploy
+  stage: gitlab
   only:
-    - deploy
+    - gitlab
   tags:
-    - fullstack-api
+    - fullstack
   script:
     - docker stop $(docker ps -aq) || true
     - docker build -t ${DOCKER_IMAGE} .
