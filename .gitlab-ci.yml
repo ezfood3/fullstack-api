@@ -22,5 +22,3 @@ Deploy:
     - docker stop $(docker ps -aq) || true
     - docker build -t ${DOCKER_IMAGE} .
     - docker run -it -d -p 8080:80 --restart=unless-stopped ${DOCKER_IMAGE}
-include:
-  - template: Security/SAST.gitlab-ci.yml
