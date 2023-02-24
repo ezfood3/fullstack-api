@@ -8,8 +8,6 @@ COPY requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
-RUN apk add --no-cache python3-dev libffi-dev gcc && pip3 install --upgrade pip 
-
 RUN python3 -m pip install --no-cache-dir --upgrade \
         setuptools \
         wheel \
