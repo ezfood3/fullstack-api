@@ -8,7 +8,7 @@ COPY requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
-RUN python3 -m pip install --no-cache-dir --upgrade \
+RUN python3 -m pip install --no-cache-dir --upgrade --user \
         setuptools \
         wheel \
         && \
