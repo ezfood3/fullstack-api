@@ -7,6 +7,16 @@ from resolver import random_items, random_genres_items
 app = FastAPI()
 
 
+origin = [
+    "http://localhost",
+    "http://localhost:3000",
+    "https://dq-hustlecoding.github.io/dqflex",
+    "https://dq-hustlecoding.github.io",
+    "http://www.dqflex.kro.kr/dqflex",
+    "http://www.dqflex.kro.kr"
+]
+
+
 @app.get("/")
 async def root():
     return {"message": "Hello, world!"}
