@@ -13,8 +13,8 @@ origins = [
     "http://localhost:3000",
     "https://dq-hustlecoding.github.io/dqflex",
     "https://dq-hustlecoding.github.io",
-    "http://www.dqflex.kro.kr/dqflex",
-    "http://www.dqflex.kro.kr",
+    "http://www.dongdong.click/dqflex",
+    "http://www.dongdong.click",
 ]
 
 
