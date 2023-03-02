@@ -2,18 +2,29 @@ from typing import List, Optional
 from fastapi import FastAPI, Query
 from recommender import item_based_recommendation, user_based_recommendation
 from resolver import random_items, random_genres_items
+from fastapi.middleware.cors import CORSMiddleware
 
 
-origin = [
+app = FastAPI()
+
+
+origins = [
     "http://localhost",
     "http://localhost:3000",
     "https://dq-hustlecoding.github.io/dqflex",
     "https://dq-hustlecoding.github.io",
     "http://www.dqflex.kro.kr/dqflex",
-    "http://www.dqflex.kro.kr"
+    "http://www.dqflex.kro.kr",
 ]
 
-app = FastAPI()
+
+app.add_mieeleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
